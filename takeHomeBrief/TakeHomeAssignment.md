@@ -109,7 +109,5 @@ Usage of these components:
   <CardParagraph>
         Para
   </CardParagraph>
-
-  <img src={props.imgSrc} />
 </Card>
 ```
