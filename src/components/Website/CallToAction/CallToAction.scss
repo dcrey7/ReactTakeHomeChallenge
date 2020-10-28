@@ -1,0 +1,41 @@
+@import "../../App.scss";
+
+.call-to-action-component {
+  background-color: $white;
+  padding-bottom: 2%;
+}
+
+.call-to-action-button {
+    background:#F87A7A !important;
+}
+
+@media only screen and (max-width: 1000px) {
+    .call-to-action-section-header-style {
+        @include interpolate(font-size, 350px, 1000px, 18px, 36px);
+        font-weight: 900;
+        text-align: center;
+        padding-bottom: 4%;
+    }
+    .call-to-action-section-text-style {
+        @include interpolate(font-size, 350px, 1000px, 12px, 24px);
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+
+    .call-to-action-section-header-style {
+        @include interpolate(font-size, 1000px, 2560px, 24px, 72px);
+        font-weight: 900;
+        margin-bottom: 4%;
+        text-align: center;
+      }
+
+    .call-to-action-section-text-style {
+        @include interpolate(font-size, 1000px, 2560px, 18px, 52px);
+        text-align: center;
+    }
+}
+
+
+  

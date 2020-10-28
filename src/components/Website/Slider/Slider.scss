@@ -1,0 +1,82 @@
+@import "../../App.scss";
+
+@mixin interpolateh($properties, $min-screen, $max-screen, $min-value, $max-value) {
+	& {
+		@each $property in $properties {
+			#{$property}: $min-value;
+		}
+
+		@media screen and (min-height: $min-screen) {
+			@each $property in $properties {
+				#{$property}: calc-interpolationh($min-screen, $min-value, $max-screen, $max-value); 
+			}
+		}
+
+		@media screen and (min-height: $max-screen) {
+			@each $property in $properties {
+				#{$property}: $max-value;
+			}
+		}
+	}
+}
+
+// Requires the calc-interpolation function which can also be used independently
+@function calc-interpolationh($min-screen, $min-value, $max-screen, $max-value) {
+	$a: ($max-value - $min-value) / ($max-screen - $min-screen);
+	$b: $min-value - $a * $min-screen; 
+
+	$sign: "+";
+	@if ($b < 0) {
+		$sign: "-";
+		$b: abs($b);
+	}
+	@return calc(#{$a*100}vh #{$sign} #{$b});
+}
+
+.slider-style {
+    width: 100%;
+    margin: auto;
+	background-color: $teal;
+	padding: 0 5%;
+	text-align: right;
+	
+	button {
+		background: none!important;
+		border: none;
+		width: 60px;
+		/*optional*/
+		font-family: arial, sans-serif;
+		/*input has OS specific font-family*/
+		color: $white;
+		border: 2px solid $white;
+		border-radius: 10px;
+		cursor: pointer;
+		text-align: center;
+		margin-top: 5%;
+
+		i {
+			padding: 12%;
+		}
+	}
+
+    .slider-content-style {
+		// padding-top: 40%;
+		text-align: center;
+		margin: auto 9%;
+		margin-top: -5%;
+		font-weight: 400;
+		color: $white;
+
+		b {
+			font-weight: 600;
+		}
+
+		@media only screen and (min-width: 1000px) {
+			@include interpolateh(font-size, 1000px, 2560px, 60px, 150px);
+		}
+
+		@media only screen and (max-width: 1000px) {
+			@include interpolateh(font-size, 350px, 1000px, 24px, 48px);
+		}
+	}
+}

@@ -1,0 +1,116 @@
+@import "../../App.scss";
+
+.program-container-style {
+  @media only screen and (min-width: 1000px) {
+    display: flex;
+    background-color: $off-white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 7%;
+    padding-right: 7%;
+    padding-bottom: 5%;
+    padding-top: 5%;
+    box-shadow: 0 15px 0px 0px white, 0 -15px 0px 0px white, 12px 0 15px -4px rgba(0,0,0, 0.025), -12px 0 15px -4px rgba(0,0,0,0.025);
+
+    .program-header-style {
+      @include interpolate(font-size, 1000px, 2560px, 48px, 96px);
+      color: $orange;
+      font-weight: 900;
+    }
+
+    .program-section-style {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+
+      .program-section-content-style {
+        padding: 5%;
+        .program-section-header-style {
+          @include interpolate(font-size, 1000px, 2560px, 21px, 62px);
+          font-weight: 900;
+          margin-bottom: 5%;
+        }
+        .program-section-text-style {
+          @include interpolate(font-size, 1000px, 2560px, 12px, 36px);
+        }
+      }
+      .program-section-img-style {
+        padding-right: 5%;
+        @include interpolate(width, 1000px, 2560px, 250px, 430px);
+        height: auto;
+      }
+
+      .program-section-img-style-rev {
+        padding-left: 5%;
+        @include interpolate(width, 1000px, 2560px, 250px, 430px);
+        height: auto;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 1000px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $off-white;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 0;
+    padding: 5%;
+    box-shadow: 0 15px 0px 0px white, 0 -15px 0px 0px white, 12px 0 15px -4px rgba(0,0,0, 0.025), -12px 0 15px -4px rgba(0,0,0,0.025);
+
+    .program-header-style {
+      @include interpolate(font-size, 350px, 1000px, 32px, 48px);
+      color: $orange;
+      font-weight: 900;
+    }
+
+    .mobile-order-style {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      margin-top: 10%;
+      padding: 5%;
+
+      .program-section-content-style {
+        order: 2;
+        padding: 5%;
+        .program-section-header-style {
+          @include interpolate(font-size, 350px, 1000px, 18px, 36px);
+          font-weight: 900;
+          margin-bottom: 5%;
+          text-align: center;
+        }
+        .program-section-text-style {
+          @include interpolate(font-size, 350px, 1000px, 12px, 24px);
+          text-align: center;
+        }
+      }
+      .program-section-img-style {
+        order: 1;
+        @include interpolate(width, 350px, 1000px, 125px, 350px);
+        height: auto;
+      }
+
+      .program-section-img-style-rev {
+        order: 1;
+        @include interpolate(width, 350px, 1000px, 125px, 350px);
+        height: auto;
+      }
+    }
+  }
+
+  .mobile-remove {
+    display: none;
+  }
+}

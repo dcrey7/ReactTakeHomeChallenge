@@ -1,0 +1,21 @@
+.card-container-style {
+  margin: 5% 2%;
+  padding: 15px;
+  height: 350px;
+  width: 300px;
+  border-radius: 1vw;
+  background-color: white;
+  box-shadow: 0 0 3px 1px #ccc;
+
+  .card-header {
+    height: 50px;
+    text-align: right;
+    background-color: white;
+    box-shadow: 0;
+    border: 0;
+  }
+
+  .card-content {
+    height: 300px;
+  }
+}

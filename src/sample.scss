@@ -1,0 +1,41 @@
+import App.scss
+
+// FORMAT FOR SCSS FILES.
+
+.container-style {
+    // alignment
+    display: flex;
+    flex-direction: /* whatever */;
+    justify-content: /* whatever */;
+    align-content: /* whatever */;
+
+    // spacing
+    margin, padding 
+
+    // width, height
+    //use either %s or interpolate.
+
+    // color 
+    background-color: , text-color;
+
+    // font-style
+    interpolate,
+
+    .child-sfdsjflsd-style {
+        //repeat 
+
+
+    }
+}
+
+// FORMAT FOR HTML FILES
+
+<div className="dsfds"> 
+ <div className="ffff">
+    <form>
+        <input
+    </form>
+ </div>
+</div>
+
+

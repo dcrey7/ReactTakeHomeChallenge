@@ -1,0 +1,209 @@
+@import "../../App.scss";
+
+.mentor-journey-container-style {
+  @media only screen and (min-width: 1000px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $off-white;
+    width: 80%;
+    margin-top: 2%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 8%;
+    padding-bottom: 10%;
+    box-shadow: 0 15px 0px 0px white, 0 -15px 0px 0px white, 12px 0 15px -4px rgba(0,0,0, 0.025), -12px 0 15px -4px rgba(0,0,0,0.025);
+
+    .mentor-journey-header-style {
+      @include interpolate(font-size, 1000px, 2560px, 48px, 96px);
+      color: $orange;
+      font-weight: 900;
+    }
+
+    .mentor-journey-section-style {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: 75%;
+      margin-top: 5%;
+      margin-bottom: 2%;
+
+      .mentor-journey-section-content-style {
+        padding: 5%;
+        .mentor-journey-section-header-style {
+          @include interpolate(font-size, 1000px, 2560px, 28px, 72px);
+          font-weight: 900;
+          margin-bottom: 5%;
+        }
+        .mentor-journey-section-repeat-header-style {
+          @include interpolate(font-size, 1000px, 2560px, 40px, 80px);
+          font-weight: 900;
+          margin-bottom: 5%;
+          text-align:center;
+        }
+        .mentor-journey-section-text-style {
+          @include interpolate(font-size, 1000px, 2560px, 16px, 48px);
+        }
+        .mentor-journey-section-repeat-text-style {
+          @include interpolate(font-size, 1000px, 2560px, 28px, 56px);
+          text-align: center;
+          margin: 0 auto;
+        }
+
+        .minimal {
+          @include interpolate(font-size, 1000px, 2560px, 36px, 72px);
+          color:#FF8553 !important;
+          font-weight: 600 !important;
+          text-align: center !important;
+          margin-top:5% !important;
+        }
+      }
+      .mentor-journey-section-img-style {
+        @include interpolate(width, 1000px, 2560px, 150px, 360px);
+        height: auto;
+      }
+
+      .mentor-journey-section-img-style-rev {
+        @include interpolate(width, 1000px, 2560px, 150px, 360px);
+        height: auto;
+        margin-left: 3%;
+      }
+    }
+
+    .mentor-journey-apply-style {
+      // dimens
+      background:#F87A7A !important;
+      @include interpolate(width, 1000px, 2560px, 500px, 1280px);
+
+      // spacing
+      padding: 5%;
+      margin-top: 10%;
+
+      // decoration
+      color: $white;
+      text-align: center;
+      text-decoration: none;
+      font-weight: 900;
+      background: $orange;
+      border: none;
+      border-radius: 1vw;
+
+      // behavior
+      &:focus {outline:0;}
+      &:hover {
+          opacity: 0.95;
+      }
+
+      @include interpolate(font-size, 1000px, 2560px, 24px, 48px);
+    }
+  }
+
+  @media only screen and (max-width: 1000px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    background-color: $off-white;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 5%;
+    padding: 10% 5%;
+    box-shadow: 0 15px 0px 0px white, 0 -15px 0px 0px white, 12px 0 15px -4px rgba(0,0,0, 0.025), -12px 0 15px -4px rgba(0,0,0,0.025);
+
+    .mentor-journey-header-style {
+      @include interpolate(font-size, 350px, 1000px, 32px, 48px);
+      color: $orange;
+      font-weight: 900;
+    }
+
+    .mobile-order-style {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      margin-top: 10%;
+      padding: 5%;
+      padding-bottom: 0;
+
+      .mentor-journey-section-content-style {
+        order: 2;
+        padding: 5%;
+        .mentor-journey-section-header-style {
+          @include interpolate(font-size, 350px, 1000px, 18px, 36px);
+          font-weight: 900;
+          margin-bottom: 5%;
+          text-align: center;
+        }
+        .mentor-journey-section-repeat-header-style {
+          @include interpolate(font-size, 350px, 1000px, 24px, 48px);
+          font-weight: 900;
+          margin-bottom: 5%;
+          text-align: center;
+        }
+        .mentor-journey-section-text-style {
+          @include interpolate(font-size, 350px, 1000px, 12px, 24px);
+          text-align: center;
+        }
+        .mentor-journey-section-repeat-text-style {
+          @include interpolate(font-size, 350px, 1000px, 12px, 28px);
+          text-align: center;
+          margin: 0 auto;
+        }
+
+        .minimal {
+          @include interpolate(font-size, 350px, 1000px, 16px, 36px);
+          color:#FF8553 !important;
+          font-weight: 600 !important;
+          text-align: center !important;
+          margin-top: 10% !important;
+        }
+      }
+      .mentor-journey-section-img-style {
+        order: 1;
+        @include interpolate(width, 350px, 1000px, 100px, 250px);
+        height: auto;
+      }
+
+      .mentor-journey-section-img-style-rev {
+        order: 1;
+        @include interpolate(width, 350px, 1000px, 100px, 250px);
+        height: auto;
+      }
+    }
+
+    .mentor-journey-apply-style {
+      // dimens
+      background:#F87A7A !important;
+      @include interpolate(width, 350px, 1000px, 200px, 600px);
+
+      // spacing
+      padding: 5%;
+      margin-top: 10%;
+
+      // decoration
+      color: $white;
+      text-align: center;
+      text-decoration: none;
+      font-weight: 900;
+      background: $orange;
+      border: none;
+      border-radius: 1vw;
+
+      // behavior
+      &:focus {outline:0;}
+      &:hover {
+          opacity: 0.95;
+      }
+
+      @include interpolate(font-size, 350px, 1000px, 14px, 28px);
+    }
+  }
+
+  .mobile-remove {
+    display: none;
+  }
+}

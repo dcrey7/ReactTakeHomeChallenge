@@ -1,0 +1,216 @@
+@import "../../App.scss";
+
+.apply-button-style {
+    border: 3px solid $white;
+    @include interpolate(border-radius, 1000px, 2560px, 5px, 10px);
+    padding: 8% 20%;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    &:hover, &:focus {
+        border: 3px solid $white; 
+        color: $orange;
+        background-color: $white;
+    }
+
+    @media only screen and (max-width: 991px) {
+        border: none;
+        padding: 0%;
+        background-color: $black;
+        color: $orange;
+
+        &:hover, &:focus {
+            border: none;
+            background-color: $black;
+            color: $white;
+        }
+    }
+}
+
+.navbar-style {
+    // display
+    width: 100%;
+
+    .logo-img {
+        padding-left: 15%;
+        @include interpolate(width, 350px, 2560px, 100px, 350px);
+        height: auto;
+    }
+
+    // color
+    background-color: $black;
+
+    // text
+    font-family: inherit;
+    font-style: normal;
+    text-align: center;
+    color: $white;
+    // padding-bottom: 109px;
+
+    .navlink-style {
+        //spacing
+        margin-left: 2vw;
+        margin-right: 2vw;
+
+        // fonts
+        font-size: $font_size_smallest;
+        color: $white!important;
+        font-weight: 600!important;
+
+        &:hover {
+            color: $gray;
+        }
+
+        @media only screen and (max-width: 1000px) {
+            font-size: $font_size_smaller;
+        }
+
+        @media only screen and (max-width: 800px) {
+            font-size: $font_size_small;
+        }
+
+        @media only screen and (max-width: 500px) {
+            font-size: $font_size_large;
+        }
+    }
+
+    #nav-dropdown {
+        //spacing
+        margin-left: 2vw;
+        margin-right: 2vw;
+
+        // text
+        font-size: $font_size_smallest;
+        color: $white;
+        &:active {
+            color: $white;
+        }
+
+        &:hover {
+            color: $gray;
+        }
+
+        @media only screen and (max-width: 1000px) {
+            font-size: $font_size_smaller;
+        }
+
+        @media only screen and (max-width: 800px) {
+            font-size: $font_size_small;
+        }
+
+        @media only screen and (max-width: 500px) {
+            font-size: $font_size_large;
+        }
+    }
+
+    #navdrop1 {
+        // color
+        background-color: $black;
+
+        // text
+        color: $white;
+
+        // spacing
+        margin: 0;
+        padding: 0.5vw;
+        padding-bottom: 0.75vw;
+
+        &:hover {
+            color: $gray;
+        }
+
+        @media only screen and (max-width: 991px) {           
+            // border
+            border-top: none;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: $font_size_smaller;
+        }
+
+        @media only screen and (max-width: 800px) {           
+            // border
+            font-size: $font_size_small;
+        }
+
+        @media only screen and (max-width: 500px) {           
+            // border
+            font-size: $font_size_medium;
+        }
+    }
+
+    #navdrop2 {
+        // color
+        background-color: $black;
+        
+        // text
+        color: $white;
+        
+        // spacing
+        margin: 0;
+        padding: 0.5vw;
+        padding-top: 0.75vw;
+
+        // border
+        border-top: 0.05vw solid $white;
+
+        &:hover {
+            color: $gray;
+        }
+
+        @media only screen and (max-width: 991px) {           
+            // border
+            border-top: none;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: $font_size_smaller;
+        }
+
+        @media only screen and (max-width: 800px) {           
+            // border
+            font-size: $font_size_small;
+        }
+
+        @media only screen and (max-width: 500px) {           
+            // border
+            font-size: $font_size_medium;
+        }
+    }
+
+    .dropdown-menu[aria-labelledby = nav-dropdown] {
+        // color
+        background-color: $black;
+
+        // border
+        border-radius: 0em;
+        // positioning
+        right: 2vw;
+        left: 2.2vw;
+        top: 3.3em;
+
+        @media only screen and (max-width: 1250px) {
+            font-size: $font_size_smallest;
+            left: 1.5vw;
+            top: 3em;
+        }
+
+        @media only screen and (max-width: 1160px) {
+            left: 0.5vw;
+            top: 3em;
+        }
+
+        @media only screen and (max-width: 1080px) {
+            left: 0vw;
+        }
+
+        @media only screen and (max-width: 1020px) {
+            left: -0.5vw;
+        }
+
+        @media only screen and (max-width: 500px) {
+            font-size: $font_size_large;
+        }
+    }
+}

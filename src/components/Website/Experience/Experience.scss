@@ -1,0 +1,121 @@
+@import "../../App.scss";
+
+.mentor-program-container-style {
+  @media only screen and (min-width: 1000px) {
+    display: flex;
+    background-color: $white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 7%;
+    padding-right: 7%;
+    padding-bottom: 5%;
+    padding-top: 5%;
+    box-shadow: 0 15px 0px 0px white, 0 -15px 0px 0px white, 12px 0 15px -4px rgba(0,0,0, 0.025), -12px 0 15px -4px rgba(0,0,0,0.025);
+
+
+    .mentor-program-header-style {
+      @include interpolate(font-size, 1000px, 2560px, 48px, 96px);
+      color: $orange;
+      font-weight: 900;
+      text-align: center;
+    }
+
+    .mentor-program-section-style {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: 90%;
+
+      .mentor-program-section-content-style {
+        padding: 10% 0%;
+        .mentor-program-section-header-style {
+          @include interpolate(font-size, 1000px, 2560px, 24px, 64px);
+          font-weight: 900;
+          margin-bottom: 5%;
+        }
+        .mentor-program-section-text-style {
+          @include interpolate(font-size, 1000px, 2560px, 18px, 36px);
+        }
+      }
+      .mentor-program-section-img-style {
+        padding-right: 5%;
+        @include interpolate(width, 1000px, 2560px, 200px, 400px);
+        height: auto;
+      }
+
+      .mentor-program-section-img-style-rev {
+        padding-left: 5%;
+        @include interpolate(width, 1000px, 2560px, 200px, 400px);
+        height: auto;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 1000px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $white;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 0;
+    padding: 5%;
+    box-shadow: 0 15px 0px 0px white, 0 -15px 0px 0px white, 12px 0 15px -4px rgba(0,0,0, 0.025), -12px 0 15px -4px rgba(0,0,0,0.025);
+
+    .mentor-program-header-style {
+      @include interpolate(font-size, 350px, 1000px, 28px, 48px);
+      color: $orange;
+      font-weight: 900;
+      text-align: center;
+    }
+
+    .mentor-mobile-order-style {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 10%;
+      padding: 5%;
+
+      .mentor-program-section-content-style {
+        order: 2;
+        padding-bottom: 10%;
+        padding-left: 3%;
+        padding-right: 3%;
+        .mentor-program-section-header-style {
+          @include interpolate(font-size, 350px, 1000px, 18px, 36px);
+          font-weight: 900;
+          margin-bottom: 5%;
+          text-align: center;
+        }
+        .mentor-program-section-text-style {
+          @include interpolate(font-size, 350px, 1000px, 12px, 24px);
+          text-align: center;
+        }
+      }
+      .mentor-program-section-img-style {
+        order: 1;
+        @include interpolate(width, 350px, 1000px, 150px, 300px);
+        height: auto;
+      }
+
+      .mentor-program-section-img-style-rev {
+        order: 1;
+        @include interpolate(width, 350px, 1000px, 150px, 300px);
+        height: auto;
+        padding-bottom: 5%;
+      }
+    }
+  }
+
+  .mobile-remove {
+    display: none;
+  }
+}

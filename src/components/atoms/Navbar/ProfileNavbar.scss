@@ -1,0 +1,21 @@
+@import "../../App.scss";
+
+.navbar-style {
+    // display
+    width: 100%;
+
+    .logo-img {
+        padding-left: 15%;
+        @include interpolate(width, 350px, 2560px, 100px, 350px);
+        height: auto;
+    }
+
+    // color
+    background-color: $black;
+
+    // text
+    font-family: inherit;
+    font-style: normal;
+    text-align: center;
+    color: $white;
+}

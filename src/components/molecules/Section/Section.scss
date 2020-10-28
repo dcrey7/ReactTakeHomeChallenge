@@ -1,0 +1,105 @@
+@import '../../App.scss';
+
+.section-container-style {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+
+    .section-banner-style {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        width: 100%;
+
+        .section-title-style {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-end;
+
+            width: 100%;
+
+            .title-style {
+                @include interpolate(font-size, 1000px, 2560px, 20px, 40px);
+                color: $black;
+                font-weight: 700; 
+            }
+
+            .breadcrumb-style {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: flex-end;
+
+                @include interpolate(font-size, 1000px, 2560px, 20px, 40px);
+                color: $black;
+                font-weight: 700; 
+
+                width: 100%;
+
+                .link-style {
+
+                    margin-right: 2%;
+                    cursor: pointer;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+            .action-style {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+                white-space: nowrap;
+
+                cursor: pointer;
+
+                @include interpolate(font-size, 1000px, 2560px, 14px, 24px);
+                color: $black;
+
+                img {
+                    width: 25px;
+                    height: auto;
+                    padding-right: 5%;
+                }
+            }
+        }
+
+        .section-banner-divider-style {
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+            width: 100%;
+            height: 2px; 
+            padding: 0%;
+            margin: 0px; 
+
+            background-color: $teal;
+            color: $teal;
+        }
+
+    }
+
+    .section-body-style {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        width: 100%;
+        margin-bottom: 5%;
+    }
+}

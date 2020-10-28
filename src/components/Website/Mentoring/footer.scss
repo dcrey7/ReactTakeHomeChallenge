@@ -1,0 +1,89 @@
+@import "../../App.scss";
+
+.footer-row-style {
+    // spacing
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 5vh;
+
+    // color
+    background-color: $black;
+}
+
+
+.footer-col-style {
+    // spacing
+    width: 33%;
+    text-align: center;
+    font-size: $font_size_smallest;
+
+    // text
+    color: $white;
+
+    a {color: white;}
+      /* mouse over link */
+    a:hover {color: white;}
+
+    .footer-content-style {
+        padding: 5%;
+        @include interpolate(font-size, 1000px, 2560px, 12px, 36px);
+    }
+
+    .footer-header-style {
+        @include interpolate(font-size, 1000px, 2560px, 18px, 48px)
+    }
+
+    .footer-link-group {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-evenly;
+        cursor: pointer;
+    }
+}
+
+.footer-divider-style {  
+    border-left: 0.05vw solid $white;
+    height: $width_8;
+    margin-top: 3vh;
+}
+
+.footer-copyright {
+    //text
+    font-size: $font_size_tiny;
+    background-color: #232323;
+    color: white;
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .footer-row-style {
+        display: block;
+        .footer-col-style {
+            width: 100%;
+            .footer-content-style {
+                padding: 5%;
+                @include interpolate(font-size, 300px, 1000px, 10px, 24px);
+            }
+        
+            .footer-header-style {
+                @include interpolate(font-size, 300px, 1000px, 14px, 30px)
+            }
+        
+            .footer-link-group {
+                width: 100%;
+            }
+        }
+
+        .footer-divider-style {  
+            height: 0;
+        }
+    }
+    .footer-copyright {
+        //text
+        @include interpolate(font-size, 300px, 1000px, 8px, 10px);
+        background-color: #232323;
+        color: white;
+    }
+}

@@ -1,0 +1,26 @@
+@import "../../App.scss";
+
+.people-card {
+  text-align: center;
+  align-items: flex-start;
+}
+
+.people-card-header {
+  @include interpolate(font-size, 1000px, 2560px, 24px, 26px);
+  margin: 10px auto;
+}
+
+.people-card-img {
+  margin: 10px auto;
+  cursor: pointer;
+}
+
+.people-card-description {
+  @include interpolate(font-size, 1000px, 2560px, 12px, 20px);
+  margin: 10px auto;
+}
+
+.people-card-status {
+  @include interpolate(font-size, 1000px, 2560px, 12px, 20px);
+  margin: 10px auto;
+}

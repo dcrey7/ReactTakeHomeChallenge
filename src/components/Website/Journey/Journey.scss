@@ -1,0 +1,171 @@
+@import "../../App.scss";
+
+.journey-container-style {
+  @media only screen and (min-width: 1000px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $white;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 0;
+    margin-bottom: 5%;
+    padding-top: 5%;
+    padding-bottom: 10%;
+    box-shadow: 0 15px 0px 0px white, 0 -15px 0px 0px white, 12px 0 15px -4px rgba(0,0,0, 0.025), -12px 0 15px -4px rgba(0,0,0,0.025);
+
+
+    .journey-header-style {
+      @include interpolate(font-size, 1000px, 2560px, 48px, 96px);
+      color: $orange;
+      font-weight: 900;
+    }
+
+    .journey-section-style {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: 75%;
+      margin-top: 5%;
+      margin-bottom: 2%;
+
+      .journey-section-content-style {
+        padding: 5%;
+        .journey-section-header-style {
+          @include interpolate(font-size, 1000px, 2560px, 24px, 64px);
+          font-weight: 900;
+          margin-bottom: 5%;
+        }
+        .journey-section-text-style {
+          @include interpolate(font-size, 1000px, 2560px, 15.5px, 44px);
+        }
+      }
+      .journey-section-img-style {
+        @include interpolate(width, 1000px, 2560px, 250px, 522px);
+        height: auto;
+      }
+
+      .journey-section-img-style-rev {
+        @include interpolate(width, 1000px, 2560px, 250px, 500px);
+        height: auto;
+      }
+    }
+
+    .journey-apply-style {
+      // dimens
+      @include interpolate(width, 1000px, 2560px, 500px, 1280px);
+
+      // spacing
+      padding: 5%;
+      margin-top: 10%;
+
+      // decoration
+      color: $white;
+      text-align: center;
+      text-decoration: none;
+      font-weight: 900;
+      background: #F87A7A !important;
+      border: none;
+      border-radius: 1vw;
+
+      // behavior
+      &:focus {outline:0;}
+      &:hover {
+          opacity: 0.95;
+      }
+
+      @include interpolate(font-size, 1000px, 2560px, 18px, 36px);
+    }
+  }
+
+  @media only screen and (max-width: 1000px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    background-color: $white;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding: 5%;
+    box-shadow: 0 15px 0px 0px white, 0 -15px 0px 0px white, 12px 0 15px -4px rgba(0,0,0, 0.025), -12px 0 15px -4px rgba(0,0,0,0.025);
+
+    .journey-header-style {
+      @include interpolate(font-size, 350px, 1000px, 32px, 48px);
+      color: $orange;
+      font-weight: 900;
+    }
+
+    .mobile-order-style {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      margin-top: 10%;
+      padding: 5%;
+      padding-bottom: 0;
+
+      .journey-section-content-style {
+        order: 2;
+        padding: 5%;
+        .journey-section-header-style {
+          @include interpolate(font-size, 350px, 1000px, 18px, 36px);
+          font-weight: 900;
+          margin-bottom: 5%;
+          text-align: center;
+        }
+        .journey-section-text-style {
+          @include interpolate(font-size, 350px, 1000px, 12px, 24px);
+          text-align: center;
+        }
+      }
+      .journey-section-img-style {
+        order: 1;
+        @include interpolate(width, 350px, 1000px, 100px, 250px);
+        height: auto;
+      }
+
+      .journey-section-img-style-rev {
+        order: 1;
+        @include interpolate(width, 350px, 1000px, 100px, 250px);
+        height: auto;
+      }
+    }
+
+    .journey-apply-style {
+      // dimens
+      @include interpolate(width, 350px, 1000px, 200px, 600px);
+
+      // spacing
+      padding: 5%;
+      margin-top: 10%;
+
+      // decoration
+      color: $white;
+      text-align: center;
+      text-decoration: none;
+      font-weight: 900;
+      background: #F87A7A !important;
+      border: none;
+      border-radius: 1vw;
+
+      // behavior
+      &:focus {outline:0;}
+      &:hover {
+          opacity: 0.95;
+      }
+
+      @include interpolate(font-size, 350px, 1000px, 18px, 36px);
+    }
+  }
+
+  .mobile-remove {
+    display: none;
+  }
+}

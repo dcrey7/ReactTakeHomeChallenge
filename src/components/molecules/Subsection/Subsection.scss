@@ -1,0 +1,35 @@
+@import "../../App.scss";
+
+.subsection-style {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    .subsection-title-style {
+        @include interpolate(font-size, 1000px, 2560px, 18px, 36px);
+        color: $black;
+        font-weight: 700; 
+    }
+
+    .subsection-desc-style {
+        @include interpolate(font-size, 1000px, 2560px, 14px, 24px);
+        color: $black;
+        word-wrap: break-word;
+    }
+
+    .subsection-list-item-style {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+
+        @include interpolate(font-size, 1000px, 2560px, 14px, 24px);
+        color: $black;
+
+        & > a {
+            padding-left: 10%;
+        }
+    }
+}
+

@@ -1,0 +1,71 @@
+@import "../App.scss";
+
+.logo-style {
+    // display
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+    // font
+    font-style: normal;
+    font-weight: normal;
+    font-family: inherit;
+    font-size: $font_size_smallest;
+    color: $white;
+
+    // spacing
+    margin-left: 1.25vw;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+
+    @media only screen and (max-width: 1000px) {
+        font-size: $font_size_smaller;
+    }
+
+    @media only screen and (max-width: 800px) {
+        font-size: $font_size_small;
+    }
+
+    @media only screen and (max-width: 500px) {
+        font-size: $font_size_large;
+    }
+
+    @media only screen and (max-width: 350px) {
+        display: none;
+    }
+
+    .logo-inner-style {
+        // display 
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        text-align: end;
+
+        // font 
+        font-style: normal;
+        font-weight: normal;
+        font-family: inherit;
+        font-size: $font_size_tiny;
+        color: $white;
+
+        @media only screen and (max-width: 1100px) {
+            font-size: $font_size_smallest;
+        }
+
+        @media only screen and (max-width: 800px) {
+            font-size: $font_size_smaller;
+        }
+    
+        @media only screen and (max-width: 500px) {
+            font-size: $font_size_small;
+        }
+
+        @media only screen and (max-width: 350px) {
+            display: none;
+        }
+
+        // spacing
+        margin-left: 0.25vw;
+    }
+}

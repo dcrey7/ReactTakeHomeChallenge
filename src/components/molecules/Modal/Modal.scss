@@ -1,0 +1,65 @@
+@import "../../App.scss";
+
+.modal-container-style {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1;
+
+    width: 100%;
+    height: 100%;
+
+    padding-top: 5%;
+    padding-bottom: 5%;
+
+    background-color: rgba(0, 0, 0, 0.8);
+
+    overflow: scroll;
+
+    .modal-content-style {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+
+        height: 90%;
+        width: 50%;
+
+        border: 1px solid $black;
+        border-radius: 10px;
+
+        background-color: $white;
+
+        overflow: scroll;
+
+        .close-style {
+            align-self: flex-end;
+            padding: 5%;
+
+            cursor: pointer;
+        }
+
+        .title-style {
+            align-self: center;
+            text-align: center;
+            @include interpolate(font-size, 1000px, 2560px, 20px, 40px);
+        }
+    
+        .modal-body-style {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            width: 100%;
+
+            margin-top: 5%;
+            margin-bottom: 2%;
+        }
+    }
+}

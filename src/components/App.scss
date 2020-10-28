@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Muli:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400&display=swap');
+
+@mixin interpolate($properties, $min-screen, $max-screen, $min-value, $max-value) {
+	& {
+		@each $property in $properties {
+			#{$property}: $min-value;
+		}
+
+		@media screen and (min-width: $min-screen) {
+			@each $property in $properties {
+				#{$property}: calc-interpolation($min-screen, $min-value, $max-screen, $max-value); 
+			}
+		}
+
+		@media screen and (min-width: $max-screen) {
+			@each $property in $properties {
+				#{$property}: $max-value;
+			}
+		}
+	}
+}
+
+// Requires the calc-interpolation function which can also be used independently
+@function calc-interpolation($min-screen, $min-value, $max-screen, $max-value) {
+	$a: ($max-value - $min-value) / ($max-screen - $min-screen);
+	$b: $min-value - $a * $min-screen; 
+
+	$sign: "+";
+	@if ($b < 0) {
+		$sign: "-";
+		$b: abs($b);
+	}
+	@return calc(#{$a*100}vw #{$sign} #{$b});
+}
+
+$header1_web: (font-size, line-height), 1000px, 2560px, 36px, 96px;
+$header2-web: font-size, 1000px, 2560px, 18px, 36px;
+$header1-mobile: font-size, 350px, 999px, 24px, 64px;
+$header2-mobile: font-size, 350px, 999px, 14px, 36px;
+
+/***** COLORS ******/
+$white: #FFFFFF;
+$off-white: #F8F8F8;
+$black: #232323;
+$orange: #FF8553;
+$teal: #2E9B9C;
+$yellow: #FFAA5E;
+$gray: #F3F3F3;
+$blue: #153D57;
+$green: #1A4D4C;
+$red: 	#FF0000;
+
+/***** DIMENSTIONS *****/
+$width_1: 1vw;
+$width_1_5: 1.5vw;
+$width_2: 2vw;
+$width_4: 4vw;
+$width_6: 6vw;
+$width_8: 8vw;
+$width_10: 10vw;
+$width_12: 12vw;
+$width_16: 16vw;
+$width_20: 20vw;
+$width_24: 24vw;
+$width_30: 30vw;
+$width_32: 32vw;
+$width_full: 100vw;
+
+$height_4: 4vh;
+$height_6: 6vh;
+$height_8: 8vh;
+$height_10: 10vh;
+$height_12: 12vh;
+$height_16: 16vh;
+$height_20: 20vh;
+$height_24: 24vh;
+$height_32: 32vh;
+$height_full: 100vh;
+
+/**** FONTS *******/
+$poppins-font: 'Poppins', sans-serif;
+$roboto-font: 'Roboto', sans-serif;
+$valera-font: 'Varela', sans-serif;
+$muli-font: 'Muli', sans-serif;
+$lato-font: 'Lato', sans-serif;
+$source-font: 'Source Sans Pro', sans-serif;
+$regular-font-weight: 400;
+$medium-font-weight: 700;
+$large-font-weight: 900;
+
+$bold-text: 700;
+$semibold-text: 600;
+$regular-text: 300;
+
+$font_size_supreme: 7vw;
+$font_size_largest: 5.5vw;
+$font_size_larger: 4.5vw;
+$font_size_large: 3.8vw;
+$font_size_medium: 3.5vw;
+$font_size_small: 3vw;
+$font_size_smaller: 2vw;
+$font_size_smallest: 1.5vw;
+$font_size_tiny: 1vw;
+
+/**** SCALE *****/
+$scale_full: 100%;
+$scale_75: 75%;
+$scale_60: 60%;
+$scale_50: 50%;
+$scale_35: 35%;
+
+/************ TAG SELECTORS ************/
+.section {
+  margin: 5% 15%;
+  padding: 5% 10%;
+  box-shadow: 0 15px 0px 0px white, 0 -15px 0px 0px white, 12px 0 15px -4px rgba(0,0,0, 0.05), -12px 0 15px -4px rgba(0,0,0,0.05);
+  background-color: white!important;
+}
+
+.section-intro {
+  padding-top: $width_6;
+}
+
+.gray-background-style {
+  background-color: rgba(0,0,0, 0.005);
+}
+
+.section-header {
+  font-family: $poppins-font;
+  font-size: 60px;
+  font-weight: $bold-text;
+  color: $orange;
+  margin-bottom: 50px!important;  
+}
+
+.footer-link-group {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  padding-left: 0px;
+  @media only screen and (max-width: 991px) {
+    padding-left: 0px;
+    padding-right: 30px;
+  }
+}
+
+.section-header-style {
+  font-size: $font_size_large;
+  font-weight: $bold-text;
+  background: -webkit-linear-gradient($orange, $yellow);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: auto 10%!important;
+  margin-bottom: 70px!important;
+}
+
+/************ COMMON STYLES ************/
+.muli-override {
+  font-family: $source-font;
+}
+
+.white-word {
+  color: $white!important;
+}
+
+.yellow-word {
+  color: $yellow;
+}
+
+.orange-word {
+  color: $orange;
+}
+
+.red-word {
+  color: $red;
+}
+
+.dark-orange-word {
+  color: $orange;
+  font-weight: $large-font-weight;
+}
+
+.blue-word {
+  color: $teal;
+}
+
+.dark-blue-word {
+  color: $blue;
+}
+
+.green-word {
+  color: $green;
+}
+
+.text-opacity {
+  opacity: 0.7;
+}
+
+.bold {
+  font-weight: $bold-text;
+}
+
+.semibold {
+  font-weight: $semibold-text;
+}
+
+.regular {
+  font-weight: $regular-text;
+}
+
+.content-header {
+  font-weight: $semibold-text;
+  font-size: 36px;
+  margin-bottom: 18px !important;
+}
+
+.small-text {
+  font-weight: $regular-text;
+  font-size: 22px;
+}
+
+.content-section {
+  margin: 6vw auto;
+}
+
+.medium-text {
+  font-size: 30px;
+  font-weight: 300;
+}
+
+.section-text {
+  font-size: 36px;
+  font-weight: 200;
+}
+
+.img-style {
+  height: 200px;
+}
+
+* {
+  font-family: $poppins-font;
+  font-weight: normal;
+  margin: 0px;
+  padding: 0px;
+}
+
+@import "~bootstrap/scss/bootstrap";
+
+/* Large monitors/desktops */
+@media only screen and (min-width: 1600px) {
+  .section {
+    padding: $width_6 $width_8;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 1024px) {
+  .content-header {
+    font-size: 26px!important;
+    margin-bottom: 10px!important;
+  }
+
+  .small-text {
+    font-size: 16px;
+  }
+
+  .medium-text {
+    font-size: 24px;
+  }
+
+  .section-text {
+    font-size: 28px!important;
+  }
+  
+  .section-header {
+    font-size: 40px!important;
+    margin-bottom: 25px!important;
+  }
+
+  .section {
+    padding: $height_6 $width_8!important;
+  }
+
+  .img-style {
+    height: 150px;
+    margin-bottom: 15px;
+  }
+
+}
+
+/* Smaller tablet devices & phones */
+@media only screen and (max-width: 768px) {
+  .small-text {
+    font-size: 14px!important;
+  }
+
+  .medium-text {
+    font-size: 18px!important;
+  }
+
+  .content-header {
+    font-size: 20px!important;
+    margin-bottom: 10px!important;
+  }
+
+  .section-text {
+    font-size: 20px!important;
+  }
+  
+  .section-header {
+    font-size: 40px!important;
+    margin-bottom: 25px!important;
+  }
+
+  .img-style {
+    height: 120px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+    .section {
+      text-align: center;
+      justify-content: center;
+    }
+
+    .content-section {
+      margin-bottom: 10vh;
+    }
+
+    .section-text {
+      font-size: 16px!important;
+    }
+
+    .medium-text {
+      font-size: 16px!important;
+    }
+}
+

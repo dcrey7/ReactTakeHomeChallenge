@@ -1,0 +1,13 @@
+@import "../../App.scss";
+
+.select-container-style{
+    display: inline-block;
+    width:400px;
+    @include interpolate(font-size, 1000px, 2560px, 14px, 28px);
+    .select-style{
+        margin : 5% 0%;
+    }
+}
+.center {
+    margin:1% auto;
+}
