@@ -2,12 +2,14 @@
 
 ## Task 1
 
-Read the given codebase and identify places where one can create re-usable react components.
-Create a comprehensive list called `components.md` in the root level directory of this project and list all of such components.
+1. Navigate to `localhost:3000/` and `localhost:3000/mentoring`.
+2. Read the given codebase and identify places where one can create re-usable react components.
+3. Create a comprehensive list called `components.md` in the root level directory of this project and list all of such components.
 
 ## Task 2
 
-Refactor the codebase to use re-usable react components. In your `components.md` please link the folder corresponding to each component.
+1. Refactor the codebase to use re-usable react components across `localhost:3000/` and `localhost:3000/mentoring`
+2. In your `components.md` please link the folder corresponding to each component.
 
 ## Time limit
 
